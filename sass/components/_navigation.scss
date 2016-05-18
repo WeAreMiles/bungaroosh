@@ -82,6 +82,7 @@ header{
 }
 
 .film-list__film{
+    position: relative;
     & + &{
         margin-top: 40px;
 
@@ -97,6 +98,7 @@ header{
     font-style: italic;
     @include font-size(17);
     color: $white;
+    position: relative;
 
     &.selected{
         font-style: normal;
@@ -271,6 +273,44 @@ header{
     }
 }
 
+.film-list__film-link{
+    &:hover{
+        .framing{
+            opacity: 1;
+        }
+        .framing-TL{
+            transform: rotate(90deg) translate3d(0px, 5px, 0);
+        }
+
+        .framing-BR{
+            transform: rotate(-90deg) translate3d(-10px, 10px, 0);
+        }
+    }
+}
+
+.framing{
+    height: 7px;
+    width: 7px;
+    background-image: url('../../images/link-flair.svg');
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.framing-TL{
+    top: 0;
+    left: 0;
+    transform-origin: top left;
+    transform: rotate(90deg) translate3d(-5px, 10px, 0);
+}
+
+.framing-BR{
+    right: 0;
+    bottom: 0;
+    transform-origin: top left;
+    transform: rotate(-90deg) translate3d(-15px, 15px, 0);
+}
+
 
 #offset-paths{
     animation: logoAnimation 1s 0.5s ease forwards;
@@ -406,6 +446,18 @@ header{
         opacity: 0.5;
     }
     100%{
+        opacity: 1;
+    }
+}
+
+@keyframes leftFlair{
+    0%{
+        transform: rotate(90deg) translate3d(-5px, 10px, 0);
+        opacity: 0;
+    }
+
+    100%{
+        transform: rotate(90deg) translate3d(0px, 5px, 0);
         opacity: 1;
     }
 }
