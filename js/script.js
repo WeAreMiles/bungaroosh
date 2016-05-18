@@ -5,12 +5,18 @@ var mainContentItems = document.getElementsByClassName('main-content__item');
 var openCloseButton = document.getElementById('open-close-button');
 var subNav = document.getElementById('sub-nav');
 var mainNavList = document.getElementById('main-nav__list');
+var openIcon = document.getElementById('open-icon');
+var closeIcon = document.getElementById('shut-icon');
 var filmID;
 var filmIWantToSee;
 var selectedFilmLink;
 var selectedFilm;
 var filmItem;
 var elementToShow;
+
+function hasClass(element, cls) {
+    return (' ' + element.className + ' ').indexOf(' ' + cls + ' ') > -1;
+}
 
 function hideAllFilms(){
     [].map.call(mainContentItems, function(el){
@@ -89,6 +95,15 @@ function handleNavOpenClose(){
     openCloseButton.classList.toggle('open');
     subNav.classList.toggle('open');
     mainNavList.classList.toggle('open');
+    if(hasClass(openCloseButton, 'open')){
+        console.log('showClose, hideOpen');
+        openIcon.style.display = 'none';
+        closeIcon.style.display = 'block';
+    } else{
+        console.log('showOpen, hideOpen');
+        openIcon.style.display = 'block';
+        closeIcon.style.display = 'none';
+    }
 }
 
 for(var iterator = 0; iterator < filmList.length; iterator++){
