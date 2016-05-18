@@ -96,11 +96,9 @@ function handleNavOpenClose(){
     subNav.classList.toggle('open');
     mainNavList.classList.toggle('open');
     if(hasClass(openCloseButton, 'open')){
-        console.log('showClose, hideOpen');
         openIcon.style.display = 'none';
         closeIcon.style.display = 'block';
     } else{
-        console.log('showOpen, hideOpen');
         openIcon.style.display = 'block';
         closeIcon.style.display = 'none';
     }
