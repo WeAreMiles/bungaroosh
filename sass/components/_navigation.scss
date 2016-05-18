@@ -251,6 +251,8 @@ header{
     position: relative;
     margin: 0px auto;
     margin-top: 20px;
+    transition: opacity 0.5s ease;
+
     &:before{
         content: '';
         display: block;
@@ -260,6 +262,10 @@ header{
         background-image: url('../../images/link-flair.svg');
         left: 2px;
         bottom: 2px;
+    }
+
+    &:hover{
+        opacity: 0.65;
     }
 }
 
