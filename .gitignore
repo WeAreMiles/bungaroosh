@@ -1,0 +1,8 @@
+node_modules
+.sass-cache
+wp-config.php
+.htaccess
+global.min.css
+global.min.css.map
+.DS_Store
+main.min.js

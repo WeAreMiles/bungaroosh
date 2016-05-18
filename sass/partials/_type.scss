@@ -1,0 +1,107 @@
+body{
+    font-size: 16px;
+    height: auto;
+}
+
+*{
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5{
+    text-transform: uppercase;
+    font-family: $f-brandon-medium;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+h1{
+}
+
+h2{
+
+}
+
+h3 {
+
+}
+
+h4{
+
+}
+
+h5{
+
+}
+
+p{
+    font-family: $f-alegreya;
+    font-weight: 400;
+    font-style: italic;
+    color: white;
+
+    .about & {
+        @include font-size(17);
+        line-height: 34px;
+
+        @media screen and ( max-height: 850px ){
+            line-height: 25px;
+        }
+    }
+
+    & + &{
+        margin-top: 20px;
+    }
+}
+
+a{
+    &.link{
+        color: white;
+    }
+
+    &.link--italic{
+        font-family: $f-alegreya;
+        font-weight: bold;
+        font-style: italic;
+        color: white;
+    }
+}
+
+span{
+
+}
+
+strong, b{
+
+}
+
+ul, ol {
+
+}
+
+ul{
+    li{
+        font-family: $f-alegreya;
+    }
+}
+
+ol{
+    li{
+
+    }
+}
+
+blockquote{
+
+}
+
+.highlight{
+    font-weight: bold;
+}
+
+.button__text{
+    font-family: $f-brandon-medium;
+    text-transform: uppercase;
+    margin-top: 9px;
+    display: block;
+}
