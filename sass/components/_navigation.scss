@@ -159,9 +159,12 @@ header{
 
     .about{
         text-align: left;
-        padding-left: 20px;
-        padding-right: 20px;
     }
+}
+
+.sub-nav__text-holder{
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .link-holder{
@@ -250,7 +253,8 @@ header{
     cursor: pointer;
     position: relative;
     margin: 0px auto;
-    margin-top: 20px;
+    margin-top: 25px;
+    transition: opacity 0.3s linear;
     &:before{
         content: '';
         display: block;
@@ -260,6 +264,10 @@ header{
         background-image: url('../../images/link-flair.svg');
         left: 2px;
         bottom: 2px;
+    }
+
+    &:hover{
+        opacity: 0.6;
     }
 }
 
@@ -271,6 +279,103 @@ header{
 
 .fill-white{
     fill: #fff;
+}
+
+.film-list__film-link{
+    span{
+        will-change: opacity;
+    }
+}
+
+#film-i-shot-einstein{
+    &:hover{
+        .char-1{
+            animation: rippleFade 0.3s ease-in-out;
+        }
+        .char-2{
+            animation: rippleFade 0.3s 0.02s ease-in-out;
+        }
+        .char-3{
+            animation: rippleFade 0.3s 0.04s ease-in-out;
+        }
+        .char-4{
+            animation: rippleFade 0.3s 0.06s ease-in-out;
+        }
+        .char-5{
+            animation: rippleFade 0.3s 0.08s ease-in-out;
+        }
+        .char-6{
+            animation: rippleFade 0.3s 0.1s ease-in-out;
+        }
+        .char-7{
+            animation: rippleFade 0.3s 0.12s ease-in-out;
+        }
+        .char-8{
+            animation: rippleFade 0.3s 0.14s ease-in-out;
+        }
+        .char-9{
+            animation: rippleFade 0.3s 0.16s ease-in-out;
+        }
+        .char-10{
+            animation: rippleFade 0.3s 0.18s ease-in-out;
+        }
+        .char-11{
+            animation: rippleFade 0.3s 0.2s ease-in-out;
+        }
+        .char-12{
+            animation: rippleFade 0.3s 0.22s ease-in-out;
+        }
+        .char-13{
+            animation: rippleFade 0.3s 0.24s ease-in-out;
+        }
+    }
+}
+
+#film-flashing-lights{
+    &:hover{
+        .char-1{
+            animation: rippleFade 0.3s ease-in-out;
+        }
+        .char-2{
+            animation: rippleFade 0.3s 0.02s ease-in-out;
+        }
+        .char-3{
+            animation: rippleFade 0.3s 0.04s ease-in-out;
+        }
+        .char-4{
+            animation: rippleFade 0.3s 0.06s ease-in-out;
+        }
+        .char-5{
+            animation: rippleFade 0.3s 0.08s ease-in-out;
+        }
+        .char-6{
+            animation: rippleFade 0.3s 0.1s ease-in-out;
+        }
+        .char-7{
+            animation: rippleFade 0.3s 0.12s ease-in-out;
+        }
+        .char-8{
+            animation: rippleFade 0.3s 0.14s ease-in-out;
+        }
+        .char-9{
+            animation: rippleFade 0.3s 0.16s ease-in-out;
+        }
+        .char-10{
+            animation: rippleFade 0.3s 0.18s ease-in-out;
+        }
+        .char-11{
+            animation: rippleFade 0.3s 0.2s ease-in-out;
+        }
+        .char-12{
+            animation: rippleFade 0.3s 0.22s ease-in-out;
+        }
+        .char-13{
+            animation: rippleFade 0.3s 0.24s ease-in-out;
+        }
+        .char-14{
+            animation: rippleFade 0.3s 0.26s ease-in-out;
+        }
+    }
 }
 
 @keyframes logoAnimation{
@@ -288,6 +393,18 @@ header{
         opacity: 0;
     }
 
+    100%{
+        opacity: 1;
+    }
+}
+
+@keyframes rippleFade{
+    0%{
+        opacity: 1
+    }
+    50%{
+        opacity: 0.5;
+    }
     100%{
         opacity: 1;
     }
