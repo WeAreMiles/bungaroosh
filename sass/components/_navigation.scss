@@ -256,6 +256,7 @@ header{
     position: relative;
     margin: 0px auto;
     margin-top: 25px;
+    margin-bottom: 12px;
     transition: opacity 0.3s linear;
     &:before{
         content: '';
@@ -264,8 +265,47 @@ header{
         height: 7px;
         width: 7px;
         background-image: url('../../images/link-flair.svg');
-        left: 2px;
-        bottom: 2px;
+        left: 4px;
+        bottom: 4px;
+    }
+
+    &:hover{
+        opacity: 0.65;
+    }
+}
+
+#button-2{
+    width: 134px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    transition: opacity 0.3s linear;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        left: -6px;
+        bottom: -6px;
+        transition: transform 0.3s ease;
+    }
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        transform: rotate(180deg);
+        right: -6px;
+        top: -6px;
         transition: transform 0.3s ease;
     }
 
@@ -273,7 +313,139 @@ header{
         opacity: 0.65;
 
         &:before{
-            transform: translate(8px, -4px);
+            transform: translate(-3px, 3px);
+        }
+
+        &:after{
+            transform: rotate(180deg) translate(-3px, 3px);
+        }
+    }
+}
+
+#button-3{
+    width: 134px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    transition: opacity 0.3s linear;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        left: 10px;
+        bottom: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        transform: rotate(180deg);
+        right: 24px;
+        top: 9px;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover{
+        opacity: 0.65;
+
+        &:before{
+            transform: translate(3px, -3px);
+        }
+
+        &:after{
+            transform: rotate(180deg) translate(3px, -3px);
+        }
+    }
+}
+
+#button-4{
+    width: 134px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    transition: opacity 0.3s linear;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        left: 4px;
+        bottom: 4px;
+        transition: transform 0.35s ease;
+    }
+
+    &:hover{
+        opacity: 0.65;
+
+        &:before{
+            transform: translate3d(32px, -5px, 0);
+        }
+    }
+}
+
+#button-5{
+    width: 134px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 25px;
+    margin-bottom: 12px;
+    transition: opacity 0.3s linear;
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        left: 4px;
+        bottom: 4px;
+        transition: all 0.5s ease-out;
+    }
+
+    &:after{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        right: 4px;
+        top: 4px;
+        transition: all 0.5s ease-out;
+        opacity: 0;
+        transform: rotate(180deg);
+    }
+
+    &:hover{
+        opacity: 0.65;
+
+        &:before{
+            opacity: 0;
+        }
+
+        &:after{
+            opacity: 1;
         }
     }
 }
