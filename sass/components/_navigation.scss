@@ -243,33 +243,6 @@ header{
     }
 }
 
-.button{
-    width: 134px;
-    height: 40px;
-    border: 1px solid white;
-    cursor: pointer;
-    position: relative;
-    margin: 0px auto;
-    margin-top: 20px;
-    transition: opacity 0.5s ease;
-
-    &:before{
-        content: '';
-        display: block;
-        position: absolute;
-        height: 7px;
-        width: 7px;
-        background-image: url('../../images/link-flair.svg');
-        left: 2px;
-        bottom: 2px;
-    }
-
-    &:hover{
-        opacity: 0.65;
-    }
-}
-
-
 #offset-paths{
     animation: logoAnimation 1s 0.5s ease forwards;
     transform: translate3d(0, -25px, 0);

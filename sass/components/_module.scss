@@ -21,6 +21,65 @@
     background-size: cover;
     margin: 20px;
     z-index: 1;
+    text-align: center;
+}
+
+.button{
+    width: 134px;
+    height: 40px;
+    border: 1px solid white;
+    cursor: pointer;
+    position: relative;
+    margin: 0px auto;
+    margin-top: 20px;
+    transition: opacity 0.5s ease;
+    text-align: center;
+    display: inline-block;
+
+    &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        height: 7px;
+        width: 7px;
+        background-image: url('../../images/link-flair.svg');
+        left: 2px;
+        bottom: 2px;
+        transition: transform 0.3s ease;
+    }
+
+    &:hover{
+        opacity: 0.65;
+
+        &:before{
+            transform: translate(4px, -4px);
+        }
+    }
+}
+
+.button--play{
+    .button__text{
+     padding-top: 9px;
+     color: white;
+     margin: 0px auto;
+     display: inline-block;
+    }
+}
+
+.film-details{
+    display: inline-block;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0px auto;
+
+    .button{
+        margin: 0px auto;
+    }
+}
+
+.film-details__watch-holder{
+    text-align: center;
 }
 
 #i-shot-einstein{
