@@ -2,11 +2,13 @@ var filmList = document.getElementsByClassName('film-list__film-link');
 var mainNav = document.getElementsByClassName('main-nav__link');
 var subNavSections = document.getElementsByClassName('sub-nav__content');
 var mainContentItems = document.getElementsByClassName('main-content__item');
+var allFilms = document.getElementsByClassName('bungaroosh-video');
 var openCloseButton = document.getElementById('open-close-button');
 var subNav = document.getElementById('sub-nav');
 var mainNavList = document.getElementById('main-nav__list');
 var openIcon = document.getElementById('open-icon');
 var closeIcon = document.getElementById('shut-icon');
+var body = document.getElementById('page-body');
 var filmID;
 var filmIWantToSee;
 var selectedFilmLink;
@@ -21,6 +23,12 @@ function hasClass(element, cls) {
 function hideAllFilms(){
     [].map.call(mainContentItems, function(el){
         el.style.opacity = 0;
+    });
+}
+
+function pauseAllFilms(){
+    [].map.call(allFilms, function(el){
+        el.pause();
     });
 }
 
@@ -40,17 +48,27 @@ function showSelectedFilm(){
     selectedFilm.style.opacity = 1;
 }
 
+function playFilmPreview(elementToShow){
+    filmToPlay = elementToShow + '-video';
+    filmToPlay = document.getElementById(filmToPlay);
+    if(filmToPlay){
+        filmToPlay.play();
+    }
+}
+
 function previewFilm(){
     filmItem = this;
     elementToShow = getElementToShow(filmItem);
     elementToShow = elementToShow.slice(5);
     hideAllFilms();
+    playFilmPreview(elementToShow);
     showFilm(elementToShow);
 }
 
 function resetFilmPreviews(){
     hideAllFilms();
     showSelectedFilm();
+    pauseAllFilms();
 }
 
 function removeSelected(item){
@@ -67,6 +85,7 @@ function handleFilmItemClasses(){
         removeSelected(filmList[iterator2]);
     }
     addSelected(filmItem);
+    playFilmPreview()
 }
 
 function handleMainNavClasses(mainNavItem){
@@ -92,6 +111,7 @@ function handleMainNav(){
 }
 
 function handleNavOpenClose(){
+    body.classList.toggle('open');
     openCloseButton.classList.toggle('open');
     subNav.classList.toggle('open');
     mainNavList.classList.toggle('open');

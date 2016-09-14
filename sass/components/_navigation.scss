@@ -97,6 +97,7 @@ header{
     font-style: italic;
     @include font-size(17);
     color: $white;
+    padding: 10px;
 
     &.selected{
         font-style: normal;
@@ -150,8 +151,6 @@ header{
     transition: opacity 0.1s ease;
     opacity: 0;
     overflow: hidden;
-    overflow-y: scroll;
-    max-height: 800px;
 
     &.selected{
         display: block;
@@ -245,7 +244,7 @@ header{
 
 #offset-paths{
     animation: logoAnimation 1s 0.5s ease forwards;
-    transform: translate3d(0, -25px, 0);
+    transform: translate3D(0, -25px, 0);
 }
 
 .fill-white{

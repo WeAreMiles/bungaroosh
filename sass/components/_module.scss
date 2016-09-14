@@ -63,18 +63,48 @@
 
 .film-details{
     display: inline-block;
-    position: relative;
+    position: absolute;
     top: 50%;
     transform: translateY(-50%);
     margin: 0px auto;
+    left: 0;
+    right: 0;
+    margin-top: 90px;
+
+    .open &{
+        @media handheld, screen and (min-width: $medium-breakpoint){
+            left: 53%;
+            right: auto;
+        }
+    }
+
+
 
     .button{
         margin: 0px auto;
+        text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.32);
+        box-shadow: 3px 4px 7px rgba(0, 0, 0, 0.32);
     }
 }
 
 .film-details__watch-holder{
+    margin-top: 100px;
     text-align: center;
+}
+
+.film-details__text{
+    margin-bottom: 15px;
+    @include font-size(21);
+    text-shadow: 3px 4px 7px rgba(0, 0, 0, 0.32);
+}
+
+.video{
+    height:100%;
+    overflow: hidden;
+
+    video{
+        object-fit: cover;
+    }
 }
 
 #i-shot-einstein{
